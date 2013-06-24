@@ -34,7 +34,7 @@ get '/cal/:token' do
   end
 
   content_type 'text/calendar'
-  [200, ["BEGIN:VCALENDAR", "VERSION:2.0", *vevents(tickets), "END:VCALENDAR"].join("\n")]
+  [200, ["BEGIN:VCALENDAR", "VERSION:2.0", "CALNAME:Eventbrite", *vevents(tickets), "END:VCALENDAR"].join("\n")]
 end
 
 def vevents(orders)
