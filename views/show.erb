@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Eventbite</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        background-color: #acc;
+      }
+      #cal {
+        min-width: 50%;
+        text-align: center;
+      }
+      #cal input {
+        font-size: x-large;
+        width: 80%;
+        border: 1px solid #ccc;
+        padding: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <article id='cal'>
+      <h1>Try putthing this in your calendar somewhere.</h1>
+      <input value="<%= ical %>" readonly onclick="this.select()"/>
+      <p>blame <a href="http://pkqk.net">pkqk</a></p>
+    </article>
+  </body>
+</html>

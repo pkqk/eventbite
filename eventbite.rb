@@ -20,7 +20,7 @@ end
 
 get '/authorised' do
   token = client.auth_code.get_token(params[:code], :redirect_uri => redirect_uri)
-  "try: " + url("/cal/#{token.token}")
+  erb :show, :locals => { :ical => url("/cal/#{token.token}") }
 end
 
 get '/cal/:token' do
