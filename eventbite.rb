@@ -14,7 +14,7 @@ get '/favicon.ico' do
   410
 end
 
-get '/connect' do
+get '/' do
   redirect client.auth_code.authorize_url(:redirect_uri => redirect_uri)
 end
 
