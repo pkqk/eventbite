@@ -67,5 +67,5 @@ def vevent(event)
 end
 
 def ical_time(time)
-  time.utc.iso8601.gsub(/[:-]/,'')
+  time.utc.iso8601.gsub(/[:-Z]/,'')
 end
