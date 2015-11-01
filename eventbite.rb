@@ -20,10 +20,10 @@ end
 
 get '/authorised' do
   token = client.auth_code.get_token(params[:code], :redirect_uri => redirect_uri)
-  erb :show, :locals => { :ical => url("/cal/#{token.token}") }
+  erb :show, :locals => { :ical => url("/cal/#{token.token}.ics") }
 end
 
-get '/cal/:token' do
+get '/cal/:token(.ics)?' do
   ebc = EventbriteClient.new(:access_token => params[:token])
 
   tickets = begin
