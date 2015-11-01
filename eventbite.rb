@@ -38,7 +38,7 @@ get '/cal/:token.ics' do
     "BEGIN:VCALENDAR",
     "VERSION:2.0",
     "PRODID:-//pkqk//NONSGML eventbite//EN",
-    "CALNAME:Eventbrite",
+    "X-WR-CALNAME:Eventbrite",
     *vevents(tickets),
     "END:VCALENDAR"
   ].join("\r\n")]
