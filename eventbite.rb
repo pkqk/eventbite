@@ -23,7 +23,7 @@ get '/authorised' do
   erb :show, :locals => { :ical => url("/cal/#{token.token}.ics") }
 end
 
-get '/cal/:token(.ics)?' do
+get '/cal/:token.ics' do
   ebc = EventbriteClient.new(:access_token => params[:token])
 
   tickets = begin
